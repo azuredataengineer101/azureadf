@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#DYNCRM-25150] Child 3 : On D&amp;B Match stage for Customer Account Request (similar to DYNCRM-24896)</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://adlm.nielseniq.com/jira/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [DYNCRM-25150]&nbsp;<a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25150">Child 3 : On D&amp;B Match stage for Customer Account Request (similar to DYNCRM-24896)</a>
+            <span class="subText">
+               Created: 31/Mar/25                   &nbsp;Updated: 21/Aug/25
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Test</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://adlm.nielseniq.com/jira/secure/BrowseProject.jspa?id=52002">Dynamics CRM</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Component/s:</b></td>
+            <td>
+                                        <a title="Sales"
+                href="https://adlm.nielseniq.com/jira/issues/?jql=project%3D52002%20AND%20%22component%22%3D56919%20ORDER%20BY%20priority%20ASC"
+            >Sales</a>                        </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                            <a class="user-hover" rel="bhma4003" id="word_reporter_bhma4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003">Mayank Bhatnagar</a>
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                            <a class="user-hover" rel="amsa4003" id="word_assignee_amsa4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=amsa4003">Samrudhi Sanjaykumar Ambegave</a>
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-7244104-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Account, Drop3, Project_Joy                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original Estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Attachments:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://adlm.nielseniq.com/jira/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File" role="presentation">
+                    image-2025-05-28-12-11-16-060.png &nbsp;&nbsp;&nbsp;
+                                    <img src="https://adlm.nielseniq.com/jira/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File" role="presentation">
+                    image-2025-08-21-13-41-38-105.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue Links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Addresses</b><br/>
+                            </td>
+                        </tr>
+                                    <tr>
+            <td>
+                Addresses
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-28364">
+                     <strike>DYNCRM-28364</strike>                 </a>
+            </td>
+            <td>
+                Matching DnB records not visible and ...
+            </td>
+            <td>
+                Withdrawn
+            </td>
+        </tr>
+            <tr>
+            <td>
+                Addresses
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-28458">
+                     <strike>DYNCRM-28458</strike>                 </a>
+            </td>
+            <td>
+                Issues on -Customer Account Creation
+            </td>
+            <td>
+                Withdrawn
+            </td>
+        </tr>
+                                                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Child of</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                is child of
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21772">
+                     DYNCRM-21772                 </a>
+            </td>
+            <td>
+                New Customer Account Request (For END...
+            </td>
+            <td>
+                Parking Lot
+            </td>
+        </tr>
+                                                <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Dependency</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                Is a dependency of
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21780">
+                     DYNCRM-21780                 </a>
+            </td>
+            <td>
+                Setup MDM Review MSD List View
+            </td>
+            <td>
+                Ready for UAT Deployment
+            </td>
+        </tr>
+                                                <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Test</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                is tested by
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-28290">
+                     DYNCRM-28290                 </a>
+            </td>
+            <td>
+                TC_25150_01 New Field &quot;Dnb Match&quot; in ...
+            </td>
+            <td>
+                Ready for Execution
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+
+                                    <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Epic Link:</b></td>
+                <td id="customfield_10006-7244104-value" class="value" bgcolor="#ffffff" width="80%">
+    <a class="aui-label ghx-label-11" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21719">
+        Create Account 
+    </a>
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>As a...:</b></td>
+                <td id="customfield_17507-7244104-value" class="value" bgcolor="#ffffff" width="80%">      Seller
+  </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>I need...:</b></td>
+                <td id="customfield_17508-7244104-value" class="value" bgcolor="#ffffff" width="80%">      that I can work on finding the potential match within the system
+  </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>So that...:</b></td>
+                <td id="customfield_17509-7244104-value" class="value" bgcolor="#ffffff" width="80%">      I can find the right match and relevant information is populated for Customer Account
+  </td>
+            </tr>
+                                            <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Target Version/s:</b></td>
+                <td id="customfield_23201-7244104-value" class="value" bgcolor="#ffffff" width="80%">    <div class="shorten" id="customfield_23201-field">
+                                    <a href="https://adlm.nielseniq.com/jira/issues/?jql=project%3D%22DYNCRM%22%20AND%20%22Target+Version%2Fs%22%3D%22JOY-Aug%22%20ORDER%20BY%20priority%20ASC" title="JOY-Aug">JOY-Aug</a>                        </div>
+</td>
+            </tr>
+                                            <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>High-Level Solution:</b></td>
+                <td id="customfield_17601-7244104-value" class="value" bgcolor="#ffffff" width="80%">      <p><b>Solution</b></p>
+<ul>
+	<li><b>Account request</b> entity changes
+	<ol>
+		<li>Create a field with name DnB Match on the Account Request entity.</li>
+		<li>Field Type = Lookup of DnB Match entity.</li>
+	</ol>
+	</li>
+	<li>As part of spike <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24745" class="external-link" rel="nofollow">https://adlm.nielseniq.com/jira/browse/DYNCRM-24745</a> flow already exists
+	<ol>
+		<li>Flow Name : PA: D&amp;B Integration</li>
+	</ol>
+	</li>
+	<li><b>Javascipt changes :</b> Write a new Js function on change of the BPF stage to <b>DnB Match</b>
+	<ol>
+		<li>Execute the Power Automate with required parameters</li>
+		<li>Based on the response from the Power Automate, create <b>DnB records</b> using Js and associate the record with the Account request record.</li>
+		<li>Once the DnB lookup is set with the value and save, delete the remaining DNB matching records associated with the current Account Request(if DnB Match !== Match Not Found) (show progress indicator while deleting the records) using a new JavaScript function.</li>
+		<li>Don't delete the DnB Macth record if DnB Match = Match Not Found.</li>
+		<li>Delete record at MDM stage after record selection by MDM team.</li>
+	</ol>
+	</li>
+	<li>New Power automate
+	<ol>
+		<li>Create a new Power Automate PA_Integratoion_D&amp;B_Extended_Match</li>
+		<li>Trigger: - On change of DnB Match on the Account Request Table.</li>
+		<li>Action:
+		<ol>
+			<li>Retrieve the extra details which are not available in the cleanse match using Extended match.</li>
+			<li>Note: Parameter details can be found in the <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24640" title="Creation of D&amp;B Match Entity" class="issue-link" data-issue-key="DYNCRM-24640">DYNCRM-24640</a> Creation of DnB Match Entity - ADLM Jira</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+</ul>
+
+
+<ul>
+	<li>Js functionality for populating values on fields based on selection of DNB record, refer AC for fields</li>
+</ul>
+
+
+<ul>
+	<li>Javascript changes
+	<ol>
+		<li>Onload of the form, record the fields are empty.</li>
+		<li>Then based on the selection of DNB match record or on change of DNB match record always populate the fields which are empty when the form is loaded.</li>
+	</ol>
+	</li>
+</ul>
+
+  </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Delivery Team:</b></td>
+                <td id="customfield_10018-7244104-value" class="value" bgcolor="#ffffff" width="80%">    Team 9
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Story Points:</b></td>
+                <td id="customfield_10002-7244104-value" class="value" bgcolor="#ffffff" width="80%">    8
+</td>
+            </tr>
+                                            <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10004-7244104-value" class="value" bgcolor="#ffffff" width="80%">Team 9- Joy - Sprint 20, Team 9- Joy - Sprint 21, Team 9- Joy - Sprint 22</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Release Instructions:</b></td>
+                <td id="customfield_16204-7244104-value" class="value" bgcolor="#ffffff" width="80%">      <p>Please refer story <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24896" title="Child 4 : On D&amp;B Match stage for SAP Account Request" class="issue-link" data-issue-key="DYNCRM-24896">DYNCRM-24896</a> for release instructions.</p>
+  </td>
+            </tr>
+                                                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Acceptance Criteria TODO:</b></td>
+                <td id="customfield_30100-7244104-value" class="value" bgcolor="#ffffff" width="80%">
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        
+        <div id="customfield_30100-view"
+            class="o-checklist"
+            data-checklist="[{&quot;id&quot;:1,&quot;name&quot;:&quot;A **D\u0026B Match** field needs to be created on Customer Account Request Entity of type lookup of D\u0026B Match Entity (created as part of DYNCRM-24640)&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:0,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:2,&quot;name&quot;:&quot;When the the BPF stage changes to **D\u0026B Match** automatically, System should fetch the D\u0026B data and make it available for the seller/ MDM selection on the D\u0026B lookup form&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:1,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:13,&quot;name&quot;:&quot;Request status on BPF Stage - D\u0026B Match will be **In Progress**&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:2,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:11,&quot;name&quot;:&quot;D\u0026B Search should happen based on below parameters&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:3,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:true,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:12,&quot;name&quot;:&quot;Customer Account name* (mandatory input by seller) -\u003E Business Name ;\nCountry (mandatory) -\u003E Primary Address Country/Region ;\nAddress ** (optional) -\u003E Primary Address ;\nWebsite (optional) -\u003E Company URL ;\nPhone (optional) -\u003E Primary Phone&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:4,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:21,&quot;name&quot;:&quot;The country name within the brackets in the account name (\u003CCOUNTRY\u003E) should not be sent to D\u0026B for search&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:5,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:4,&quot;name&quot;:&quot;Seller try to find potential match manually&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:6,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:true,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:6,&quot;name&quot;:&quot;Seller can click on **Advance find** to traverse to D\u0026B Account Match lookup form populated from DYNCRM-24640 to find the potential match&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:7,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:14,&quot;name&quot;:&quot;The fields on the Lookup form should be in the following order :\n1. Business Name;\n2. DUNS;\n3. Location Type;\n4. Company URL;\n5. Primary Address (show the full address including city, postal code, state/province in one field);\n6. Sales USD;\n7. National Identification Number&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:8,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:15,&quot;name&quot;:&quot;Only the first / top 15 matches should be displayed on the lookup with filtering criteria of Confidence Code \u003E= 6&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:9,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:19,&quot;name&quot;:&quot;**Note** : In case the seller is unable to find the potential match, MDM Team can try to find the potential match DYNCRM-24939&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:10,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:16,&quot;name&quot;:&quot;Scenario 1 :In case of Potential Match by Seller ( When D\u0026B Match is found by seller)&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:11,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:true,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:7,&quot;name&quot;:&quot;Seller will select the potential match manually and click **Done** button&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:12,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:9,&quot;name&quot;:&quot;On receipt of D\u0026B Match, the second duplicate check should run DYNCRM-24902&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:13,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:8,&quot;name&quot;:&quot;Additional fields :-                                                                                                  \nAddress Line 1 ;\nAddress Line 2 ;\nCity ;\nPostal Code;\nState/Province;\nPhone;\nWebsite / URL; \nDomain;                                                                                                                   \nwill also be populated on the Customer Account form DYNCRM-23752 on selection of DUNS Number except for the Dummy DUNS Number when **Match not found**                                                                                       \nDetails on https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D\u0026file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx\u0026nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0\u0026action=default\u0026mobileredirect=true&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:14,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:23,&quot;name&quot;:&quot;The above Additional fields will only be populated when found blank; in case value on any of these fields is provided by Seller , it should not be overwritten&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:15,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:17,&quot;name&quot;:&quot;Scenario 2 :In case of No Potential Match by Seller (When D\u0026B Match is not found by Seller)&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:16,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:true,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:10,&quot;name&quot;:&quot;If no potential match is found, seller will manually select **Match not found** option and click **Done** button&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:17,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:18,&quot;name&quot;:&quot;If the seller selects **Match not found** as options; system should skip 2nd Duplicate check DYNCRM-24902 and seller should be able to save the record&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:18,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:22,&quot;name&quot;:&quot;On save of record -\u003E Action 1 : The Customer Account Request should move to BPF Stage **MDM Review** with request status = **MDM-Pending review** . Next action on DYNCRM-24939. These requests will be visible on view as specified in DYNCRM-21780&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:19,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}, {&quot;id&quot;:20,&quot;name&quot;:&quot;Action 2 : Customer Account will be created with Compliance / Finance Status = Draft DYNCRM-23752 with only the fields present on the request populated by the user and defaulted by the system                                              ((Refer Customer Account Form tab for details: https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D\u0026file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx\u0026nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0\u0026action=default\u0026mobileredirect=true))&quot;,&quot;mandatory&quot;:true,&quot;rank&quot;:20,&quot;statusId&quot;:&quot;none&quot;,&quot;dueDate&quot;:null,&quot;isHeader&quot;:false,&quot;checked&quot;:false,&quot;priorityId&quot;:null,&quot;assigneeIds&quot;:[],&quot;globalItemId&quot;:-1,&quot;version&quot;:&quot;5.0&quot;,&quot;linkedIssueKey&quot;:null}]"
+            data-app-properties="{&quot;projectKeyPattern&quot;:&quot;([A-Z][A-Z0-9]+)&quot;,&quot;javascriptDateFormat&quot;:&quot;%e/%b/%y&quot;,&quot;javascriptDateTimeFormat&quot;:&quot;%e/%b/%y %I:%M %p&quot;,&quot;timePickerUseISO8601&quot;:false}"
+            data-checklist-mode="preview"
+            data-checklist-context="{&quot;permissionScheme&quot;:{&quot;ALL&quot;:{&quot;generallyCan&quot;:true,&quot;rules&quot;:[]},&quot;CHANGE_DUE_DATE&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;CHECK_ITEM&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;INTERACT_WITH_TEMPLATE&quot;:{&quot;parent&quot;:&quot;ALL&quot;,&quot;generallyCan&quot;:true,&quot;rules&quot;:[]},&quot;CHANGE_PRIORITY&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;CHANGE_STATUS&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;CREATE_ITEM&quot;:{&quot;parent&quot;:&quot;EDIT_CHECKLIST&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;DELETE_ITEM&quot;:{&quot;parent&quot;:&quot;EDIT_CHECKLIST&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;CONVERT_TO_ISSUE&quot;:{&quot;parent&quot;:&quot;ALL&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;EDIT_ITEM&quot;:{&quot;parent&quot;:&quot;EDIT_CHECKLIST&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;CHANGE_ASSIGNEE&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;TOGGLE_MANDATORY&quot;:{&quot;parent&quot;:&quot;WORK_ON_ITEM&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;EDIT_CHECKLIST&quot;:{&quot;parent&quot;:&quot;ALL&quot;,&quot;generallyCan&quot;:true,&quot;rules&quot;:[]},&quot;WORK_ON_ITEM&quot;:{&quot;parent&quot;:&quot;ALL&quot;,&quot;generallyCan&quot;:true,&quot;rules&quot;:[]},&quot;REORDER_ITEM&quot;:{&quot;parent&quot;:&quot;EDIT_CHECKLIST&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;MANAGE_OWNED_TEMPLATES&quot;:{&quot;parent&quot;:&quot;INTERACT_WITH_TEMPLATE&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]},&quot;IMPORT_TEMPLATE&quot;:{&quot;parent&quot;:&quot;INTERACT_WITH_TEMPLATE&quot;,&quot;rules&quot;:[{&quot;type&quot;:&quot;SERVER&quot;,&quot;value&quot;:true}]}},&quot;appParameters&quot;:{&quot;historyDateFormat&quot;:&quot;yyyy-MM-dd HH:mm Z&quot;,&quot;allowProjectAdminsToConfigure&quot;:false,&quot;cleverChangelog&quot;:true,&quot;validateGlobalItems&quot;:true,&quot;showContactSupport&quot;:false,&quot;allowIssueConversion&quot;:true,&quot;showChecklistsInAgileDetailsView&quot;:true,&quot;showProvideFeedback&quot;:true,&quot;issuePanelViewWeight&quot;:250,&quot;issueSidePanelViewWeight&quot;:50,&quot;agileSidePanelViewWeight&quot;:1000},&quot;canConvertToSubtask&quot;:true,&quot;canLinkIssues&quot;:true,&quot;loggedInUser&quot;:&quot;sich5001&quot;,&quot;viewLocation&quot;:&quot;DEFAULT&quot;,&quot;fieldType&quot;:&quot;CHECKLIST&quot;,&quot;savesOnEdit&quot;:false,&quot;isTemplateViewLocation&quot;:false,&quot;isGlobalItemsViewLocation&quot;:false,&quot;isDefaultItemsViewLocation&quot;:false,&quot;isCustomerPortalViewLocation&quot;:false,&quot;id&quot;:30100,&quot;issueKey&quot;:&quot;DYNCRM-25150&quot;,&quot;projectId&quot;:52002,&quot;projectKey&quot;:&quot;DYNCRM&quot;,&quot;issueId&quot;:7244104,&quot;customFieldId&quot;:&quot;customfield_30100&quot;,&quot;fieldConfigId&quot;:52101,&quot;parameters&quot;:{&quot;version&quot;:5,&quot;discretionaryOptionIds&quot;:[],&quot;statusCsv&quot;:&quot;todo_status_1953, Not applicable, Complete, Keep, Keep\r\ntodo_status_2515, In progress, Current, Keep, Keep\r\ntodo_status_798, Not applicable, Complete, Keep, Keep\r\ntodo_status_1438, In progress, Current, Keep, Keep\r\ntodo_status_2517, Not applicable, Complete, Keep, Keep\r\ntodo_status_2092, In progress, Current, Keep, Keep\r\ntodo_status_1454, Blocked, Error, Keep, Keep\r\ntodo_status_1455, Not applicable, Complete, Keep, Keep\r\ntodo_status_2346, Not applicable, Complete, Keep, Keep\r\ntodo_status_1852, In progress, Current, Keep, Keep\r\ntodo_status_2094, Not applicable, Complete, Keep, Keep\r\ntodo_status_793, In progress, Current, Keep, Keep\r\ntodo_status_286, In progress, Current, Keep, Keep\r\ntodo_status_288, Not applicable, Complete, Keep, Keep\r\ntodo_status_1453, In progress, Current, Keep, Keep\r\ntodo_status_801, Not applicable, Complete, Keep, Keep\r\ntodo_status_799, In progress, Current, Keep, Keep\r\ntodo_status_1429, In progress, Current, Keep, Keep\r\ntodo_status_1542, Not applicable, Complete, Keep, Keep\r\ntodo_status_1540, In progress, Current, Keep, Keep\r\ntodo_status_1161, Not applicable, Complete, Keep, Keep\r\ntodo_status_719, Blocked, Error, Keep, Keep\r\ntodo_status_1431, Not applicable, Complete, Keep, Keep\r\ntodo_status_639, Not applicable, Complete, Keep, Keep\r\ntodo_status_718, In progress, Current, Keep, Keep\r\ntodo_status_1850, Blocked, Error, Keep, Keep\r\ntodo_status_1541, Blocked, Error, Keep, Keep\r\ntodo_status_398, Blocked, Error, Keep, Keep\r\ntodo_status_604, In progress, Current, Keep, Keep\r\ntodo_status_666, Not applicable, Complete, Keep, Keep\r\ntodo_status_1851, Not applicable, Complete, Keep, Keep\r\ntodo_status_637, In progress, Current, Keep, Keep\r\ntodo_status_2012, Rejected, Error, Keep, Keep\r\ntodo_status_8095, QA, Moved, Keep, Keep\r\ntodo_status_8097, Withdrawn, Default, Keep, Keep\r\ntodo_status_2013, Dev Complete, Complete, Keep, Keep\r\ntodo_status_848, Blocked, Error, Keep, Keep\r\ntodo_status_794, Blocked, Error, Keep, Keep\r\ntodo_status_1983, Not applicable, Complete, Keep, Keep\r\ntodo_status_8111, Not Applicable, Complete, Keep, Keep\r\ntodo_status_8099, QA, Moved, Keep, Keep\r\ntodo_status_2516, Blocked, Error, Keep, Keep\r\ntodo_status_1822, In progress, Current, Keep, Keep\r\ntodo_status_1430, Blocked, Error, Keep, Keep\r\ntodo_status_624, Not applicable, Complete, Keep, Keep\r\ntodo_status_8127, To Do, Default, Keep, Keep&quot;,&quot;showStatusMenu&quot;:true,&quot;statusesAreMandatory&quot;:false,&quot;defaultStatusId&quot;:null,&quot;allowLocalItems&quot;:true,&quot;allowMandatory&quot;:true,&quot;lockOnResolution&quot;:true,&quot;canConvertToIssue&quot;:true,&quot;canBulkEdit&quot;:true,&quot;canBulkComplete&quot;:true,&quot;issueLinkType&quot;:&quot;&quot;,&quot;canAssignUsers&quot;:false,&quot;canSetDueDate&quot;:false,&quot;canSetPriority&quot;:false,&quot;enableAdvancedMarkdown&quot;:false,&quot;enableExternalAssetLinking&quot;:false,&quot;enableHeaderItems&quot;:true,&quot;enableHeaderItemCollapsing&quot;:true,&quot;showHeaderItemSummaries&quot;:true,&quot;defaultHeaderCollapsedState&quot;:&quot;Expanded&quot;,&quot;defaultMandatoryState&quot;:true,&quot;limitChecklistWidth&quot;:true,&quot;showProgressHeaderInReadOnlyView&quot;:true,&quot;showProgressHeaderInEditView&quot;:true,&quot;strikeThrough&quot;:true,&quot;showMore&quot;:false,&quot;showMoreCount&quot;:0,&quot;alwaysShowEmptyChecklist&quot;:true,&quot;alwaysShowUncheckedChecklist&quot;:true,&quot;hideUncheckedInReadonlyView&quot;:false,&quot;issueViewDisplayMode&quot;:&quot;IndependentPanel&quot;,&quot;summarySource&quot;:&quot;AllItems&quot;,&quot;bannerParameters&quot;:{&quot;completedLabel&quot;:&quot;&quot;,&quot;allMandatoryLabel&quot;:&quot;&quot;,&quot;incompleteLabel&quot;:&quot;&quot;,&quot;emptyLabel&quot;:&quot;&quot;,&quot;type&quot;:&quot;Progression&quot;,&quot;appearance&quot;:&quot;Normal&quot;},&quot;assigneeDisplay&quot;:&quot;Avatar&quot;,&quot;descriptionDisplay&quot;:&quot;LinkUnderItem&quot;,&quot;compactView&quot;:false,&quot;checklistPermissionSchemeId&quot;:null,&quot;reporterCanEdit&quot;:true,&quot;allCanComplete&quot;:true,&quot;limitEditionWithRoles&quot;:false,&quot;editRoleIds&quot;:[],&quot;canImportTemplateIntoChecklist&quot;:true,&quot;canCreateTemplateFromChecklist&quot;:true,&quot;createTemplateFromChecklistRoleIds&quot;:[],&quot;useConfluenceRenderer&quot;:true},&quot;statuses&quot;:[{&quot;statusId&quot;:&quot;todo_status_1953&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2515&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_798&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1438&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2517&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2092&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1454&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1455&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2346&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1852&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2094&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_793&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_286&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_288&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1453&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_801&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_799&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1429&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1542&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1540&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1161&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_719&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1431&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_639&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_718&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1850&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1541&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_398&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_604&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_666&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1851&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_637&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2012&quot;,&quot;name&quot;:&quot;Rejected&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_8095&quot;,&quot;name&quot;:&quot;QA&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;MOVED&quot;,&quot;label&quot;:&quot;Moved&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_8097&quot;,&quot;name&quot;:&quot;Withdrawn&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;DEFAULT&quot;,&quot;label&quot;:&quot;Default&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2013&quot;,&quot;name&quot;:&quot;Dev Complete&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_848&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_794&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1983&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_8111&quot;,&quot;name&quot;:&quot;Not Applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_8099&quot;,&quot;name&quot;:&quot;QA&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;MOVED&quot;,&quot;label&quot;:&quot;Moved&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_2516&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1822&quot;,&quot;name&quot;:&quot;In progress&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;CURRENT&quot;,&quot;label&quot;:&quot;Current&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_1430&quot;,&quot;name&quot;:&quot;Blocked&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;ERROR&quot;,&quot;label&quot;:&quot;Error&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_624&quot;,&quot;name&quot;:&quot;Not applicable&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;COMPLETE&quot;,&quot;label&quot;:&quot;Complete&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}},{&quot;statusId&quot;:&quot;todo_status_8127&quot;,&quot;name&quot;:&quot;To Do&quot;,&quot;statusStyle&quot;:{&quot;name&quot;:&quot;DEFAULT&quot;,&quot;label&quot;:&quot;Default&quot;},&quot;completionBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;},&quot;statusBehavior&quot;:{&quot;name&quot;:&quot;KEEP&quot;,&quot;label&quot;:&quot;Do nothing&quot;}}]}"
+            data-checklist-userstore="[{&quot;userName&quot;:&quot;sich5001&quot;,&quot;displayName&quot;:&quot;Chokkakula Sita Rambabu&quot;,&quot;email&quot;:&quot;chokkakula.sita-rambabu@capgemini.com&quot;,&quot;avatarURL&quot;:&quot;https://www.gravatar.com/avatar/f92f62bb21e20342128bc40fca9e1600?d=mm&amp;s=16&quot;,&quot;description&quot;:&quot;Chokkakula Sita Rambabu - chokkakula.sita-rambabu@capgemini.com (sich5001)&quot;}]"
+             data-checklist-issuestore="{&quot;BE307A635-92&quot;:null,&quot;DYNCRM-23752&quot;:{&quot;key&quot;:&quot;DYNCRM-23752&quot;,&quot;summary&quot;:&quot;Customer Account - Page Layout&quot;,&quot;statusName&quot;:&quot;Ready for UAT Deployment&quot;,&quot;statusColor&quot;:&quot;inprogress&quot;,&quot;typeName&quot;:&quot;Story&quot;,&quot;selfUrl&quot;:&quot;https://adlm.nielseniq.com/jira/browse/DYNCRM-23752&quot;,&quot;typeIconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/secure/viewavatar?size=xsmall&amp;avatarId=10315&amp;avatarType=issuetype&quot;},&quot;B0EE-28&quot;:null,&quot;DYNCRM-21780&quot;:{&quot;key&quot;:&quot;DYNCRM-21780&quot;,&quot;summary&quot;:&quot;Setup MDM Review MSD List View&quot;,&quot;statusName&quot;:&quot;Ready for UAT Deployment&quot;,&quot;statusColor&quot;:&quot;inprogress&quot;,&quot;typeName&quot;:&quot;Story&quot;,&quot;selfUrl&quot;:&quot;https://adlm.nielseniq.com/jira/browse/DYNCRM-21780&quot;,&quot;typeIconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/secure/viewavatar?size=xsmall&amp;avatarId=10315&amp;avatarType=issuetype&quot;},&quot;DYNCRM-24640&quot;:{&quot;key&quot;:&quot;DYNCRM-24640&quot;,&quot;summary&quot;:&quot;Creation of D&amp;B Match Entity&quot;,&quot;statusName&quot;:&quot;Ready for UAT Deployment&quot;,&quot;statusColor&quot;:&quot;inprogress&quot;,&quot;typeName&quot;:&quot;Story&quot;,&quot;selfUrl&quot;:&quot;https://adlm.nielseniq.com/jira/browse/DYNCRM-24640&quot;,&quot;typeIconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/secure/viewavatar?size=xsmall&amp;avatarId=10315&amp;avatarType=issuetype&quot;},&quot;A4-400&quot;:null,&quot;DYNCRM-24939&quot;:{&quot;key&quot;:&quot;DYNCRM-24939&quot;,&quot;summary&quot;:&quot;Child 3.1 : MDM Team tries to find potential match&quot;,&quot;statusName&quot;:&quot;Test&quot;,&quot;statusColor&quot;:&quot;inprogress&quot;,&quot;typeName&quot;:&quot;Story&quot;,&quot;selfUrl&quot;:&quot;https://adlm.nielseniq.com/jira/browse/DYNCRM-24939&quot;,&quot;typeIconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/secure/viewavatar?size=xsmall&amp;avatarId=10315&amp;avatarType=issuetype&quot;},&quot;DYNCRM-24902&quot;:{&quot;key&quot;:&quot;DYNCRM-24902&quot;,&quot;summary&quot;:&quot;Child 4 : 2nd Duplicate Check for Customer Account on DUNS Number&quot;,&quot;statusName&quot;:&quot;Test&quot;,&quot;statusColor&quot;:&quot;inprogress&quot;,&quot;typeName&quot;:&quot;Story&quot;,&quot;selfUrl&quot;:&quot;https://adlm.nielseniq.com/jira/browse/DYNCRM-24902&quot;,&quot;typeIconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/secure/viewavatar?size=xsmall&amp;avatarId=10315&amp;avatarType=issuetype&quot;}}"
+             data-checklist-prioritystore="[{&quot;id&quot;:&quot;10300&quot;,&quot;name&quot;:&quot;Blocker&quot;,&quot;iconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/images/icons/priorities/blocker.svg&quot;,&quot;statusColor&quot;:&quot;#990000&quot;},{&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;High&quot;,&quot;iconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/images/icons/priorities/high.svg&quot;,&quot;statusColor&quot;:&quot;#f15C75&quot;},{&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot;Medium&quot;,&quot;iconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/images/icons/priorities/medium.svg&quot;,&quot;statusColor&quot;:&quot;#f79232&quot;},{&quot;id&quot;:&quot;4&quot;,&quot;name&quot;:&quot;Low&quot;,&quot;iconUrl&quot;:&quot;https://adlm.nielseniq.com/jira/images/icons/priorities/low.svg&quot;,&quot;statusColor&quot;:&quot;#707070&quot;}]"
+                    >
+            <div class="o-checklist-subcontainer">
+                
+                                                    <div class="o-checklist-header"></div>
+    
+                                          
+
+
+
+
+                        <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    A <strong>D&amp;B Match</strong> field needs to be created on Customer Account Request Entity of type lookup of D&amp;B Match Entity (created as part of DYNCRM-24640)
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    When the the BPF stage changes to <strong>D&amp;B Match</strong> automatically, System should fetch the D&amp;B data and make it available for the seller/ MDM selection on the D&amp;B lookup form
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Request status on BPF Stage - D&amp;B Match will be <strong>In Progress</strong>
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    D&amp;B Search should happen based on below parameters
+                </span>
+
+                            </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Customer Account name* (mandatory input by seller) -&gt; Business Name ;<br>Country (mandatory) -&gt; Primary Address Country/Region ;<br>Address ** (optional) -&gt; Primary Address ;<br>Website (optional) -&gt; Company URL ;<br>Phone (optional) -&gt; Primary Phone
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    The country name within the brackets in the account name (&lt;COUNTRY&gt;) should not be sent to D&amp;B for search
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Seller try to find potential match manually
+                </span>
+
+                            </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Seller can click on <strong>Advance find</strong> to traverse to D&amp;B Account Match lookup form populated from DYNCRM-24640 to find the potential match
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    The fields on the Lookup form should be in the following order :1. Business Name; 2. DUNS; 3. Location Type; 4. Company URL; 5. Primary Address (show the full address including city, postal code, state/province in one field); 6. Sales USD; 7. National Identification Number 
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Only the first / top 15 matches should be displayed on the lookup with filtering criteria of Confidence Code &gt;= 6
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    <strong>Note</strong> : In case the seller is unable to find the potential match, MDM Team can try to find the potential match DYNCRM-24939
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Scenario 1 :In case of Potential Match by Seller ( When D&amp;B Match is found by seller)
+                </span>
+
+                            </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Seller will select the potential match manually and click <strong>Done</strong> button
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    On receipt of D&amp;B Match, the second duplicate check should run DYNCRM-24902
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Additional fields :-<br />
+Address Line 1 ;<br>Address Line 2 ;<br>City ;<br>Postal Code;<br>State/Province;<br>Phone;<br>Website / URL;<br>Domain;<br />
+will also be populated on the Customer Account form DYNCRM-23752 on selection of DUNS Number except for the Dummy DUNS Number when <strong>Match not found</strong><br />
+Details on https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    The above Additional fields will only be populated when found blank; in case value on any of these fields is provided by Seller , it should not be overwritten
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Scenario 2 :In case of No Potential Match by Seller (When D&amp;B Match is not found by Seller)
+                </span>
+
+                            </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    If no potential match is found, seller will manually select <strong>Match not found</strong> option and click <strong>Done</strong> button
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    If the seller selects <strong>Match not found</strong> as options; system should skip 2nd Duplicate check DYNCRM-24902 and seller should be able to save the record
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    On save of record -&gt; Action 1 : The Customer Account Request should move to BPF Stage <strong>MDM Review</strong> with request status = <strong>MDM-Pending review</strong> . Next action on DYNCRM-24939. These requests will be visible on view as specified in DYNCRM-21780
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                            <div style="display: flex; align-items: center; width: 100%; padding: 0; margin-left: 0; float: none; font-size: 14px;">
+                            <span style="align-self: flex-start; font-family: Lucida Console;">
+                    [&nbsp]*                </span>
+                        <span style="width: 100%; padding-left: 5px; cursor: default; text-align: left;">
+                                
+                                
+                                <span style="">
+                    Action 2 : Customer Account will be created with Compliance / Finance Status = Draft DYNCRM-23752 with only the fields present on the request populated by the user and defaulted by the system                                              ((Refer Customer Account Form tab for details: https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true))
+                </span>
+
+                                                        
+                    
+                                        
+                                                </span>
+        </div>
+                                          </div>
+        </div>
+    </td>
+            </tr>
+                                                                                            <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Developer/Admin:</b></td>
+                <td id="customfield_17517-7244104-value" class="value" bgcolor="#ffffff" width="80%">            <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://www.gravatar.com/avatar/3d8ec36581e397b184f67182469d720c?d=mm&amp;s=48" alt="Rudesh Nareshbhai Kateliya" /></span></span>
+        <span class="tinylink">        <span class="user-hover" rel="naru4001" id="user_cf_naru4001">Rudesh Nareshbhai Kateliya</span></span>
+    </td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Admin Can work:</b></td>
+                <td id="customfield_31301-7244104-value" class="value" bgcolor="#ffffff" width="80%">    No
+</td>
+            </tr>
+                                                                    <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Architect:</b></td>
+                <td id="customfield_32100-7244104-value" class="value" bgcolor="#ffffff" width="80%">            <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://www.gravatar.com/avatar/3b03d01e3963a36e6156f4c8036e04b8?d=mm&amp;s=48" alt="Anthony D&#39;Souza" /></span></span>
+        <span class="tinylink">        <span class="user-hover" rel="dan4001" id="user_cf_dan4001">Anthony D&#39;Souza</span></span>
+    </td>
+            </tr>
+                                                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Pre/Post Deployment Steps:</b></td>
+                <td id="customfield_35800-7244104-value" class="value" bgcolor="#ffffff" width="80%">    Yes
+</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Details for Pre/post deployment:</b></td>
+                <td id="customfield_35801-7244104-value" class="value" bgcolor="#ffffff" width="80%">      Dev
+  </td>
+            </tr>
+                                                </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p><font color="#ff8b00"> <b>Latest Updates based on the Demo provided to NIQ Business on Aug 7th and 8th :</b></font></p>
+<ol>
+	<li><b><font color="#ff8b00">On DnB Match field advance look up at DnB Match BPF stage, the 2 buttons should be removed - 'Only my records' and 'Add New' and should not be visible</font></b></li>
+	<li><b><font color="#ff8b00">Rename (Choose dnb match for Dnb Match) to logical name</font></b></li>
+	<li><font color="#ff8b00"><b>DnB Match and DUNS Number fields should be only visible on the form when we are at BPF = 'DnB Match' stage</b></font></li>
+</ol>
+
+
+<p><font color="#ff8b00"><span class="image-wrap" style=""><img src="https://adlm.nielseniq.com/jira/secure/attachment/3883915/3883915_image-2025-08-21-13-41-38-105.png" style="border: 0px solid black" /></span></font></p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Comments</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="grid" style="margin: 0;">
+                <tr id="comment-header-10254123"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="bhma4003" id="word_commented_bhma4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003">Mayank Bhatnagar</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">21/Aug/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-10254123"><td bgcolor="#ffffff">
+            <p><font color="#ff8b00"><b>Details captured during Accounts UI/Flow Demo with details are added in description of the story. Those are the latest changes required under header -</b> <em><b>Latest Updates based on the Demo provided to NIQ Business on Aug 7th and 8th</b></em> ** </font></p>
+
+<p>cc : <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=resh4001" class="external-link" rel="nofollow">Shannon Reed-humes</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dika4002" class="external-link" rel="nofollow">Karthika Divakar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jasa5004" class="external-link" rel="nofollow">Sachin Jadhav</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="external-link" rel="nofollow">Anthony D'Souza</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=agsu4001" class="external-link" rel="nofollow">Sugandha Agarwal</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pepa4001" class="external-link" rel="nofollow">Pavithra Peddareddy Viswanathreddy</a>  </p>
+        </td></tr>
+                <tr id="comment-header-9697860"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="loni4001" id="word_commented_loni4001" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001">Nilesh Lonare</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">28/May/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9697860"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> </p>
+
+<p>I have made small correction on this HLS. Please review it. Thanks  <span class="image-wrap" style=""><img src="https://adlm.nielseniq.com/jira/secure/attachment/3647550/3647550_image-2025-05-28-12-11-16-060.png" style="border: 0px solid black" /></span></p>
+
+<p>cc: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=maha4004" class="user-hover" rel="maha4004">Hariharan M</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ghsu4002" class="user-hover" rel="ghsu4002">Sumit Ghosh</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kech6003" class="user-hover" rel="kech6003">Charley Kent</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kaiv4002" class="user-hover" rel="kaiv4002">Ivaylo Karamichev</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mish2001" class="user-hover" rel="mish2001">Shivani Mishra</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003" class="user-hover" rel="bhma4003">Mayank Bhatnagar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=agsu4001" class="user-hover" rel="agsu4001">Sugandha Agarwal</a> </p>
+        </td></tr>
+                <tr id="comment-header-9656170"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="loni4001" id="word_commented_loni4001" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001">Nilesh Lonare</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">21/May/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9656170"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> </p>
+
+<p>HLS Approved!!</p>
+
+<p>CC:  <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kaga4003" class="user-hover" rel="kaga4003">Ganesh Kantak</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=resh4001" class="user-hover" rel="resh4001">Shannon Reed-humes</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kech6003" class="user-hover" rel="kech6003">Charley Kent</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=khab4004" class="user-hover" rel="khab4004">Abhishek Khare</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=smpa4001" class="user-hover" rel="smpa4001">Patrick Smith</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003" class="user-hover" rel="bhma4003">Mayank Bhatnagar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pech4003" class="user-hover" rel="pech4003">Chinthaka Perera</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=vaki4002" class="user-hover" rel="vaki4002">Kishorbhai Vadariya-Hardikkumar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=raku4003" class="user-hover" rel="raku4003">Kumar Ranjane</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ugsa5001" class="user-hover" rel="ugsa5001">Sai Uggumudi</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mish2001" class="user-hover" rel="mish2001">Shivani Mishra</a> , <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=khch4001" class="user-hover" rel="khch4001">Chandan Khuntia</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=maha4004" class="user-hover" rel="maha4004">Hariharan M</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kaiv4002" class="user-hover" rel="kaiv4002">Ivaylo Karamichev</a> </p>
+        </td></tr>
+                <tr id="comment-header-9581719"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="bhma4003" id="word_commented_bhma4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003">Mayank Bhatnagar</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">09/May/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9581719"><td bgcolor="#ffffff">
+            <p>Agreement on 9-May :</p>
+
+<p>Explicitly mentioned the reference of list view <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21780" title="Setup MDM Review MSD List View" class="issue-link" data-issue-key="DYNCRM-21780">DYNCRM-21780</a> on the AC to be clear. <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001" class="user-hover" rel="loni4001">Nilesh Lonare</a> Request you to proof read the HLS to be sure.</p>
+
+<p>cc : <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> </p>
+        </td></tr>
+                <tr id="comment-header-9540340"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="dan4001" id="word_commented_dan4001" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001">Anthony D&#39;Souza</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">04/May/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9540340"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001" class="user-hover" rel="loni4001">Nilesh Lonare</a>  <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> </p>
+
+<p>I have updated the HLS, kindly review and approve the same.</p>
+
+<p>CC:  <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kaga4003" class="user-hover" rel="kaga4003">Ganesh Kantak</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=resh4001" class="user-hover" rel="resh4001">Shannon Reed-humes</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kech6003" class="user-hover" rel="kech6003">Charley Kent</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=khab4004" class="user-hover" rel="khab4004">Abhishek Khare</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=smpa4001" class="user-hover" rel="smpa4001">Patrick Smith</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003" class="user-hover" rel="bhma4003">Mayank Bhatnagar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pech4003" class="user-hover" rel="pech4003">Chinthaka Perera</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=vaki4002" class="user-hover" rel="vaki4002">Kishorbhai Vadariya-Hardikkumar</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=raku4003" class="user-hover" rel="raku4003">Kumar Ranjane</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ugsa5001" class="user-hover" rel="ugsa5001">Sai Uggumudi</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mish2001" class="user-hover" rel="mish2001">Shivani Mishra</a> , <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=khch4001" class="user-hover" rel="khch4001">Chandan Khuntia</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=maha4004" class="user-hover" rel="maha4004">Hariharan M</a> </p>
+        </td></tr>
+                <tr id="comment-header-9492850"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="sois4001" id="word_commented_sois4001" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001">Ishesh Somani</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">25/Apr/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9492850"><td bgcolor="#ffffff">
+            <p>Approved !</p>
+        </td></tr>
+                <tr id="comment-header-9487468"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="bhma4003" id="word_commented_bhma4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003">Mayank Bhatnagar</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">24/Apr/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9487468"><td bgcolor="#ffffff">
+            <p>Agreement on 24 Apr :</p>
+
+<p>We reviewed this story during the call with <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a>  and we can progress for signoff.</p>
+
+<p><a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a>  Request you to provide signoff.</p>
+
+<p>cc : <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=agsu4001" class="user-hover" rel="agsu4001">Sugandha Agarwal</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=kaiv4002" class="user-hover" rel="kaiv4002">Ivaylo Karamichev</a> </p>
+        </td></tr>
+                <tr id="comment-header-9478678"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="perebe02" id="word_commented_perebe02" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02">Beatriz Perez</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">23/Apr/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9478678"><td bgcolor="#ffffff">
+            <p><a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003" class="user-hover" rel="bhma4003">Mayank Bhatnagar</a> a few comments on this user story: </p>
+
+<p>On first AC: the field we are finally using is DnB Match because what matches is the Company Name, DUNS Number also needs to be created, but the field for the look up is called DnB Match. <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=maha4004" class="user-hover" rel="maha4004">Hariharan M</a> can confirm this. </p>
+
+<p>On AC section "D&amp;B search should happen based on below parameters": </p>
+<ul>
+	<li>Based on DnB feedback and to be able to populate back correctly the information from DnB, we need to split the Address in 2 lines. I have included this on the spreadsheet of the Customer Account Request Form : <a href="https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/Shared%20Documents/NIQ_GFK%20CRM%20Integration%20(Project%20Joy)/06%20Integrations/D%26B%20for%20Sales%20and%20Marketing/D%26B%20Optimizer/Optimizer%20for%20Dynamics%20-%20Sample%20Output%20-%20Copy.xlsx?d=we307a63592a4400eb0ee28b1aaa297a3&amp;csf=1&amp;web=1&amp;e=LJsdtv&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0" class="external-link" target="_blank" rel="nofollow noopener">Optimizer for Dynamics - Sample Output - Copy.xlsx</a> </li>
+</ul>
+
+
+<p>On AC section "Seller try to find potential match manually": </p>
+<ul>
+	<li>Where the user goes when clicking on Advance Find is to tht DnB Match. This is just to be consistent with first AC. </li>
+	<li>The fields on the Lookup form should be in the following order (Let's update this as well on <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24896" title="Child 4 : On D&amp;B Match stage for SAP Account Request" class="issue-link" data-issue-key="DYNCRM-24896">DYNCRM-24896</a>): 
+	<ul>
+		<li>Business Name</li>
+		<li>DUNS</li>
+		<li>Location Type</li>
+		<li>Company URL</li>
+		<li>Primary Address (I hope it is possible to show the full address including city, postal code, state/province in one field. Otherwise, we will have to show them separately). </li>
+		<li>Sales USD</li>
+		<li>National Identification Number</li>
+	</ul>
+	</li>
+</ul>
+
+
+<p>On AC section "In case of Potential match": </p>
+<ul>
+	<li>AC 2 should say "On receipt of DnB Match" I think. Let's confirm with <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=maha4004" class="user-hover" rel="maha4004">Hariharan M</a> </li>
+	<li>AC 3 will be defined by what we do on the Optimizer Admin console. Let's mention that. Because DnB will populate those fields only if blank, but we need to configure it. </li>
+</ul>
+
+
+<p>On AC section "In case of No Potential MAtch": </p>
+<ul>
+	<li>AC "Action 2" I think the right AC is "... with only the fields present on the request populated by the user and defaulted by the system. And probably have a link to the Customer Account Form tab: <a href="https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/Shared%20Documents/NIQ_GFK%20CRM%20Integration%20(Project%20Joy)/06%20Integrations/D%26B%20for%20Sales%20and%20Marketing/D%26B%20Optimizer/Optimizer%20for%20Dynamics%20-%20Sample%20Output%20-%20Copy.xlsx?d=we307a63592a4400eb0ee28b1aaa297a3&amp;csf=1&amp;web=1&amp;e=wCYaYj&amp;nav=MTVfe0MyM0Q3NUU2LTE4QTEtNDA0Qy05OUExLURGMDY0OTM5QjJFOX0" class="external-link" target="_blank" rel="nofollow noopener">Optimizer for Dynamics - Sample Output - Copy.xlsx</a></li>
+</ul>
+
+
+<p>Let's discuss it over the call. </p>
+
+<p>Thanks</p>
+
+<p>Bea</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=agsu4001" class="user-hover" rel="agsu4001">Sugandha Agarwal</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001" class="user-hover" rel="loni4001">Nilesh Lonare</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> </p>
+        </td></tr>
+                <tr id="comment-header-9460565"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="bhma4003" id="word_commented_bhma4003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003">Mayank Bhatnagar</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">21/Apr/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9460565"><td bgcolor="#ffffff">
+            <p><a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> </p>
+
+<p>Request you to kindly check point 1 proposed by <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02" class="user-hover" rel="perebe02">Beatriz Perez</a> </p>
+
+<p>cc : <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> </p>
+        </td></tr>
+                <tr id="comment-header-9373350"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="perebe02" id="word_commented_perebe02" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=perebe02">Beatriz Perez</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">07/Apr/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-9373350"><td bgcolor="#ffffff">
+            <p><a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bhma4003" class="user-hover" rel="bhma4003">Mayank Bhatnagar</a> I know this is still under Defining, but I have a few things I'd like to be considered when Designing: </p>
+
+<p>1) Is there a possibility that if only one DnB Match is found, that we can autopopulate that for the seller? </p>
+
+<p>2) The option "Match not Found" will be always there and I think we should skip the second duplicate check on the DnB number when that option is selected, because otherwise, there may be duplicates? Or is it that the second duplicate check also considers the Account Name and Market? </p>
+
+<p><a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sois4001" class="user-hover" rel="sois4001">Ishesh Somani</a> I'd like to know your thoughts on the above too. </p>
+
+<p>Thanks</p>
+
+<p>Bea</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=agsu4001" class="user-hover" rel="agsu4001">Sugandha Agarwal</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=grli3001" class="user-hover" rel="grli3001">Liz Gregg</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=loni4001" class="user-hover" rel="loni4001">Nilesh Lonare</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=dan4001" class="user-hover" rel="dan4001">Anthony D'Souza</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=jaam1002" class="user-hover" rel="jaam1002">Amit Jain</a> </p>
+        </td></tr>
+            </table>
+Generated at Thu Aug 21 08:29:52 EDT 2025 by Chokkakula Sita Rambabu using Jira 10.3.8#10030008-sha1:cdaed80cecc964184c5b19b002388d56f96e274e.
+
+</body>
+</html>

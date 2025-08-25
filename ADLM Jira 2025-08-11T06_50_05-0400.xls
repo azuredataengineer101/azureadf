@@ -1,0 +1,1556 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>ADLM Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#060b45" height="60">
+        <td colspan="10">
+            <img src="https://adlm.nielseniq.com/jira/jira-logo-scaled.png" width="132" height="60" border="0" alt="ADLM Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="10">
+            <a href="https://adlm.nielseniq.com/jira/issues/?jql=%28%28project+IN+%28%22DYNCRM%22%29%29+AND+%28labels+IN+%28Account%2C+Accounts%29+AND+cf%5B10006%5D+IN+%28DYNCRM-21719%2C+DYNCRM-21722%2C+DYNCRM-22409%2C+DYNCRM-21770%29%29%29+AND+%28key+in+%28DYNCRM-21772%2CDYNCRM-21773%2CDYNCRM-21774%2CDYNCRM-21776%2CDYNCRM-21783%2CDYNCRM-21857%2CDYNCRM-21873%2CDYNCRM-22029%2CDYNCRM-22321%2CDYNCRM-22677%2CDYNCRM-22751%2CDYNCRM-22759%2CDYNCRM-22760%2CDYNCRM-22761%2CDYNCRM-22762%2CDYNCRM-23147%2CDYNCRM-23148%2CDYNCRM-23752%2CDYNCRM-23818%2CDYNCRM-23920%2CDYNCRM-24285%2CDYNCRM-24333%2CDYNCRM-24433%2CDYNCRM-24496%2CDYNCRM-24640%2CDYNCRM-24641%2CDYNCRM-24670%2CDYNCRM-24673%2CDYNCRM-24675%2CDYNCRM-24677%2CDYNCRM-24678%2CDYNCRM-24705%2CDYNCRM-24706%2CDYNCRM-24707%2CDYNCRM-24709%2CDYNCRM-24710%2CDYNCRM-24892%2CDYNCRM-24895%2CDYNCRM-24897%2CDYNCRM-24902%2CDYNCRM-24916%2CDYNCRM-24939%2CDYNCRM-24964%2CDYNCRM-25150%2CDYNCRM-25158%2CDYNCRM-25264%2CDYNCRM-25266%2CDYNCRM-25272%2CDYNCRM-25273%2CDYNCRM-25314%2CDYNCRM-25363%2CDYNCRM-25486%2CDYNCRM-25488%2CDYNCRM-25979%29%29">ADLM Jira</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="10">
+            Displaying <strong>54</strong> issues at <strong>11/Aug/25 6:50 AM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th scope="col" class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-priority" data-id="priority">
+                            Priority
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_10002" data-id="customfield_10002">
+                            Story Points
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Assignee
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_23400" data-id="customfield_23400">
+                            Development
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-created" data-id="created">
+                            Created
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                            Resolved
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow7387425" rel="7387425" data-issuekey="DYNCRM-25979" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25979" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25979">DYNCRM-25979</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                On Account Request Entity List View(s) Creation : 1. My Customer Account Requests &amp; 2. My SAP Account Requests
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 09/May/25 2:09 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7308525" rel="7308525" data-issuekey="DYNCRM-25488" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25488" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25488">DYNCRM-25488</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Customer Account Request - Page Layout
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 17/Apr/25 3:36 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7308318" rel="7308318" data-issuekey="DYNCRM-25486" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25486" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25486">DYNCRM-25486</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Changes in Stories ( DYNCRM-22761- Create AP contact field on Opportunity &amp; DYNCRM-22762-Changes on Invoice Recipient (integration with SAP for Name to Print on Invoice))
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Rahul Mangal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 17/Apr/25 3:26 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7282690" rel="7282690" data-issuekey="DYNCRM-25363" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25363" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25363">DYNCRM-25363</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Automate Industry Field Population on Customer Account and SAP Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Rahul Mangal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 10/Apr/25 3:29 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7272616" rel="7272616" data-issuekey="DYNCRM-25314" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25314" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25314">DYNCRM-25314</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Remove Sales org column from the tab &quot;SAP Account Request&quot; tab.
+    </p>
+</td>
+                                            <td class="customfield_10002">    2
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;UAT&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;UAT&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;" tabindex="0">UAT</span>    </td>
+                                            <td class="created"> 08/Apr/25 3:38 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7261906" rel="7261906" data-issuekey="DYNCRM-25273" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25273" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25273">DYNCRM-25273</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 4 : Email Notification on Rejection of Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Chokkakula Sita Rambabu
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 04/Apr/25 6:23 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7261903" rel="7261903" data-issuekey="DYNCRM-25272" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25272" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25272">DYNCRM-25272</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 3: Action by MDM Team
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 04/Apr/25 6:19 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7260949" rel="7260949" data-issuekey="DYNCRM-25266" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25266" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25266">DYNCRM-25266</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 2: Initiation Modification Process-Request creation
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Chokkakula Sita Rambabu
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 04/Apr/25 3:28 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7260911" rel="7260911" data-issuekey="DYNCRM-25264" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25264" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25264">DYNCRM-25264</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 1 : Initiate the Modification of Customer Account
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 04/Apr/25 3:08 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7245264" rel="7245264" data-issuekey="DYNCRM-25158" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25158" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25158">DYNCRM-25158</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Pagelayout - Customer Account &amp; Customer Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 31/Mar/25 9:42 AM </td>
+                                            <td class="resolutiondate"> 02/Apr/25 11:49 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7244104" rel="7244104" data-issuekey="DYNCRM-25150" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-25150" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25150">DYNCRM-25150</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 3 : On D&amp;B Match stage for Customer Account Request (similar to DYNCRM-24896)
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Samrudhi Sanjaykumar Ambegave
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 31/Mar/25 3:16 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7207247" rel="7207247" data-issuekey="DYNCRM-24964" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24964" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24964">DYNCRM-24964</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                New Industry table for HFM Code Table
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Nilesh Lonare
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 20/Mar/25 12:23 AM </td>
+                                            <td class="resolutiondate"> 02/Jun/25 5:39 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7197574" rel="7197574" data-issuekey="DYNCRM-24939" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24939" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24939">DYNCRM-24939</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 3.1 : MDM Team tries to find potential match
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Vetri Vikram Iyyappan
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 18/Mar/25 6:41 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7193329" rel="7193329" data-issuekey="DYNCRM-24916" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24916" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24916">DYNCRM-24916</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Multiple issues on SAP accounts related tab
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Akshay Kamath
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 17/Mar/25 6:27 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7183589" rel="7183589" data-issuekey="DYNCRM-24902" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24902" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24902">DYNCRM-24902</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 4 : 2nd Duplicate Check for Customer Account on DUNS Number
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Vetri Vikram Iyyappan
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 13/Mar/25 7:46 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7183194" rel="7183194" data-issuekey="DYNCRM-24897" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24897" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24897">DYNCRM-24897</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 4 : Canvas App to show the possible option from D&amp;B
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Rudesh Nareshbhai Kateliya
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 13/Mar/25 6:19 AM </td>
+                                            <td class="resolutiondate"> 19/Mar/25 10:10 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7183164" rel="7183164" data-issuekey="DYNCRM-24895" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24895" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24895">DYNCRM-24895</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 2 : 1st Duplicate Check on Account Name for Customer Account
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Samrudhi Sanjaykumar Ambegave
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 13/Mar/25 6:00 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7183128" rel="7183128" data-issuekey="DYNCRM-24892" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24892" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24892">DYNCRM-24892</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 1: Initiation of Customer Account Creation via request button and trigger of 1st Duplicate Check
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 13/Mar/25 5:50 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7159438" rel="7159438" data-issuekey="DYNCRM-24710" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24710" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24710">DYNCRM-24710</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 5-Impact of Restricted Customer Account on associated SAP Account
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 07/Mar/25 2:47 AM </td>
+                                            <td class="resolutiondate"> 12/Mar/25 9:12 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7159274" rel="7159274" data-issuekey="DYNCRM-24709" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24709" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24709">DYNCRM-24709</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 4: Actions on save of Request form for “Customer Account Compliance Restriction”
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 07/Mar/25 2:23 AM </td>
+                                            <td class="resolutiondate"> 17/Mar/25 1:52 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7159263" rel="7159263" data-issuekey="DYNCRM-24707" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24707" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24707">DYNCRM-24707</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 3: Canvas App Submit Button Functionality for Restriction for Customer Accounts
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 07/Mar/25 2:12 AM </td>
+                                            <td class="resolutiondate"> 12/Mar/25 8:44 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7159134" rel="7159134" data-issuekey="DYNCRM-24706" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24706" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24706">DYNCRM-24706</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                 Child 2: Create Canvas App for Block/Restrict/Unblock/Unrestrict for Customer Account
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 07/Mar/25 1:36 AM </td>
+                                            <td class="resolutiondate"> 12/Mar/25 8:42 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7158780" rel="7158780" data-issuekey="DYNCRM-24705" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24705" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24705">DYNCRM-24705</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 1: Flyout button for Customer Accounts
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Ishesh Somani
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 07/Mar/25 1:27 AM </td>
+                                            <td class="resolutiondate"> 12/Mar/25 8:16 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7156202" rel="7156202" data-issuekey="DYNCRM-24678" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24678" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24678">DYNCRM-24678</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 7: Email trigger if the Customer Account is Compliance Blocked in MSD
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Gopala Krishna TH
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 06/Mar/25 5:45 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7155586" rel="7155586" data-issuekey="DYNCRM-24677" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24677" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24677">DYNCRM-24677</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 5: Customer Account Request on Compliance Review stage
+    </p>
+</td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="assignee">            Mayank Bhatnagar
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 06/Mar/25 5:29 AM </td>
+                                            <td class="resolutiondate"> 13/Mar/25 8:47 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7155576" rel="7155576" data-issuekey="DYNCRM-24675" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24675" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24675">DYNCRM-24675</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 6 : Actions on Customer Accounts based on results received from Dow Jones - DYNCRM-21779
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Bhimireddy Nithin Reddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 06/Mar/25 5:19 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7155535" rel="7155535" data-issuekey="DYNCRM-24673" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24673" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24673">DYNCRM-24673</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 5 : Actions post 2nd Duplicate Check DYNCRM-24902
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 06/Mar/25 4:46 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7154895" rel="7154895" data-issuekey="DYNCRM-24670" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24670" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24670">DYNCRM-24670</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Create a Customer Group 4 Table / Entity - Technical Story
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Sai Uggumudi
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 06/Mar/25 3:03 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7144978" rel="7144978" data-issuekey="DYNCRM-24641" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24641" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24641">DYNCRM-24641</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Child 7 : Creation / Updation of Customer Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Mayank Bhatnagar
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 04/Mar/25 2:00 AM </td>
+                                            <td class="resolutiondate"> 02/Jun/25 3:16 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7144680" rel="7144680" data-issuekey="DYNCRM-24640" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24640" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24640">DYNCRM-24640</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Creation of D&amp;B Match Entity
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Sugandha Agarwal
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 04/Mar/25 12:43 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7120415" rel="7120415" data-issuekey="DYNCRM-24496" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24496" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24496">DYNCRM-24496</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Seller - Restriction of Customer Account (For END-to-END testing ; development on Child Stories)
+    </p>
+</td>
+                                            <td class="customfield_10002">    21
+</td>
+                                            <td class="assignee">            Nilesh Lonare
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 24/Feb/25 5:17 AM </td>
+                                            <td class="resolutiondate"> 12/Mar/25 8:31 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7108182" rel="7108182" data-issuekey="DYNCRM-24433" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24433" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24433">DYNCRM-24433</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Create a new option set field Account Type on Account Request Table - Technical story 
+    </p>
+</td>
+                                            <td class="customfield_10002">    2
+</td>
+                                            <td class="assignee">            Anusha Adharapu
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 20/Feb/25 3:28 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7091117" rel="7091117" data-issuekey="DYNCRM-24333" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24333" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24333">DYNCRM-24333</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Automation to create modification request for Invoice Dispatch Method , PO Required &amp; Invoice Recipient - Accounts Payable (AP) Contact
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Anusha Adharapu
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 14/Feb/25 8:15 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7083028" rel="7083028" data-issuekey="DYNCRM-24285" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-24285" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-24285">DYNCRM-24285</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Functionality on Invoice Dispatch Method field due to EDICOM
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Ganesh Kantak
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 12/Feb/25 8:53 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow7024643" rel="7024643" data-issuekey="DYNCRM-23920" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-23920" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-23920">DYNCRM-23920</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                SAP Accounts Related tab on Customer Accounts
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 28/Jan/25 12:01 AM </td>
+                                            <td class="resolutiondate"> 02/Apr/25 1:15 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6992644" rel="6992644" data-issuekey="DYNCRM-23818" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-23818" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-23818">DYNCRM-23818</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Accounts Requests tab required on Customer Accounts
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 20/Jan/25 2:55 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6955772" rel="6955772" data-issuekey="DYNCRM-23752" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-23752" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-23752">DYNCRM-23752</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Customer Account - Page Layout
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Bhimireddy Nithin Reddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;" tabindex="0">Test</span>    </td>
+                                            <td class="created"> 14/Jan/25 10:06 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6706562" rel="6706562" data-issuekey="DYNCRM-23148" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-23148" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-23148">DYNCRM-23148</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                List View for Inactive Account owners
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Ganesh Kantak
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 02/Dec/24 11:33 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6706547" rel="6706547" data-issuekey="DYNCRM-23147" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-23147" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-23147">DYNCRM-23147</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Associated Contact Record Owner
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Ganesh Kantak
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 02/Dec/24 11:29 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6577706" rel="6577706" data-issuekey="DYNCRM-22762" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22762" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22762">DYNCRM-22762</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Changes on Invoice Recipient (integration with SAP for Name to Print on Invoice) 
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Mayank Bhatnagar
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 12/Nov/24 8:08 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6577705" rel="6577705" data-issuekey="DYNCRM-22761" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22761" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22761">DYNCRM-22761</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Create AP contact field on Opportunity 
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Akshay Kamath
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 12/Nov/24 8:06 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6577704" rel="6577704" data-issuekey="DYNCRM-22760" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22760" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22760">DYNCRM-22760</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Show Invoice Dispatch method on Opportunity (picklist)
+    </p>
+</td>
+                                            <td class="customfield_10002">    13
+</td>
+                                            <td class="assignee">            Anthony D&#39;Souza
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 12/Nov/24 8:04 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6577701" rel="6577701" data-issuekey="DYNCRM-22759" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22759" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22759">DYNCRM-22759</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                Make Invoice Dispatch method compulsory and include BPF validations has context menu
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Anthony D&#39;Souza
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 12/Nov/24 8:03 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6577306" rel="6577306" data-issuekey="DYNCRM-22751" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22751" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22751">DYNCRM-22751</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Automated Accounts Handling - Third Party Tools 
+    </p>
+</td>
+                                            <td class="customfield_10002">    21
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 12/Nov/24 5:48 AM </td>
+                                            <td class="resolutiondate"> 27/Feb/25 6:49 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6572336" rel="6572336" data-issuekey="DYNCRM-22677" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22677" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22677">DYNCRM-22677</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Business Process Flow and Request status updates- Customer Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    21
+</td>
+                                            <td class="assignee">            Bhimireddy Nithin Reddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 08/Nov/24 5:19 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6475828" rel="6475828" data-issuekey="DYNCRM-22321" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22321" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22321">DYNCRM-22321</a>
+</td>
+                                            <td class="priority">           Blocker
+    </td>
+                                            <td class="summary"><p>
+                Order Management - PO updates on FAR
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Ganesh Kantak
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 21/Oct/24 5:22 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6449305" rel="6449305" data-issuekey="DYNCRM-22029" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-22029" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-22029">DYNCRM-22029</a>
+</td>
+                                            <td class="priority">           Blocker
+    </td>
+                                            <td class="summary"><p>
+                Purchase Order Required field visibility at Opportunity record. 
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Ganesh Kantak
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 07/Oct/24 1:42 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6427628" rel="6427628" data-issuekey="DYNCRM-21873" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21873" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21873">DYNCRM-21873</a>
+</td>
+                                            <td class="priority">           Blocker
+    </td>
+                                            <td class="summary"><p>
+                Purchase Order logic
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Pavithra Peddareddy Viswanathreddy
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for Test&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for Test&lt;/span&gt;" tabindex="0">Ready for Test</span>    </td>
+                                            <td class="created"> 26/Sep/24 5:19 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6427612" rel="6427612" data-issuekey="DYNCRM-21857" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21857" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21857">DYNCRM-21857</a>
+</td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="summary"><p>
+                My Account Requests List view for Seller / Sales User
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">            Chinthaka Perera
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 26/Sep/24 5:19 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6419531" rel="6419531" data-issuekey="DYNCRM-21783" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21783" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21783">DYNCRM-21783</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Seller - Modification to Customer Account Request (For End-to-End testing; Child stories for Development)
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Parking Lot&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Parking Lot&lt;/span&gt;" tabindex="0">Parking Lot</span>    </td>
+                                            <td class="created"> 25/Sep/24 4:31 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6419524" rel="6419524" data-issuekey="DYNCRM-21776" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21776" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21776">DYNCRM-21776</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Technical Story : Pending Flag - Post New Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    8
+</td>
+                                            <td class="assignee">            Umashankar N [X]
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Ready for UAT Deployment&lt;/span&gt;" tabindex="0">Ready for UAT Deployment</span>    </td>
+                                            <td class="created"> 25/Sep/24 4:31 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6419522" rel="6419522" data-issuekey="DYNCRM-21774" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21774" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21774">DYNCRM-21774</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Marketing User - New Customer Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002">    3
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 25/Sep/24 4:31 PM </td>
+                                            <td class="resolutiondate"> 08/Nov/24 2:14 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6419521" rel="6419521" data-issuekey="DYNCRM-21773" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21773" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21773">DYNCRM-21773</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                Service agent - New Customer Account Request
+    </p>
+</td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Withdrawn&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Story has been removed from the backlog for some reason and has not been accepted into production&lt;/span&gt;" tabindex="0">Withdrawn</span>    </td>
+                                            <td class="created"> 25/Sep/24 4:31 PM </td>
+                                            <td class="resolutiondate"> 21/Nov/24 7:16 AM </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+
+
+                <tr id="issuerow6419520" rel="6419520" data-issuekey="DYNCRM-21772" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DYNCRM-21772" href="https://adlm.nielseniq.com/jira/browse/DYNCRM-21772">DYNCRM-21772</a>
+</td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="summary"><p>
+                New Customer Account Request (For END to END testing ; Development from Child Stories) 
+    </p>
+</td>
+                                            <td class="customfield_10002">    5
+</td>
+                                            <td class="assignee">            Mayank Bhatnagar
+    </td>
+                                            <td class="customfield_23400">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Parking Lot&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Parking Lot&lt;/span&gt;" tabindex="0">Parking Lot</span>    </td>
+                                            <td class="created"> 25/Sep/24 4:31 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="issuetype">    Story
+</td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="10"><font size="1">
+        Generated at Mon Aug 11 06:50:05 EDT 2025 by Chokkakula Sita Rambabu using Jira 10.3.8#10030008-sha1:cdaed80cecc964184c5b19b002388d56f96e274e.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

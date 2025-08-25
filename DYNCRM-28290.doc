@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#DYNCRM-28290] TC_25150_01 New Field &quot;Dnb Match&quot; in Customer Account Creation Request form</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://adlm.nielseniq.com/jira/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [DYNCRM-28290]&nbsp;<a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-28290">TC_25150_01 New Field &quot;Dnb Match&quot; in Customer Account Creation Request form</a>
+            <span class="subText">
+               Created: 31/Jul/25                   &nbsp;Updated: 06/Aug/25
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">Ready for Execution</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://adlm.nielseniq.com/jira/secure/BrowseProject.jspa?id=52002">Dynamics CRM</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Component/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix Version/s:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Test
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                            <a class="user-hover" rel="bona4002" id="word_reporter_bona4002" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=bona4002">Navya Chaitanya Borigorla</a>
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                            <a class="user-hover" rel="mara5003" id="word_assignee_mara5003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mara5003">Rahul Mangal</a>
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-7703438-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Account, In-Sprint-testing, JOY-CapG, ceqa-gfk-sprint20-testing                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original Estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue Links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Test</b><br/>
+                            </td>
+                        </tr>
+                                    <tr>
+            <td>
+                tests
+            </td>
+            <td>
+                <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25150">
+                     DYNCRM-25150                 </a>
+            </td>
+            <td>
+                Child 3 : On D&amp;B Match stage for Cust...
+            </td>
+            <td>
+                Test
+            </td>
+        </tr>
+                                                                    </table>
+            </td>
+        </tr>
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Zephyr Teststep:</b></td>
+                <td id="customfield_13212-7703438-value" class="value" bgcolor="#ffffff" width="80%">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>Login to Dynamics 365 SalesHub app</p></td>
+                        <td style="max-height: 25px;"><p>Sales user/MDM Team</p></td>
+                        <td style="max-height: 25px;"><p>Sales Hub app is opened</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">2</td>
+                        <td style="max-height: 25px;"><p>Navigate to sitemap and click on Accounts entity</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Active Customer Accounts view must be displayed</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">3</td>
+                        <td style="max-height: 25px;"><p>Click on <span class="error">&#91;New Customer Account Creation Request&#93;</span> button on top menu bar of Accounts homepage.</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Customer Account Creation Request form will open</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">4</td>
+                        <td style="max-height: 25px;"><p>Check for "Dnb Match" field in Account Information section of  Customer Account Summary tab</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>"Dnb Match" field is present in Account Information section of  Customer Account Summary tab</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">5</td>
+                        <td style="max-height: 25px;"><p>Provide all Mandatory fields value in Customer Account Summary tab and click on <span class="error">&#91;Save&#93;</span></p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Provided all mandatory fields value and Clicked on <span class="error">&#91;Save&#93;</span> and BPF changed to "Dnb Match" Stage and Request status on BPF Stage - Dnb Match will be "In Progress"</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">6</td>
+                        <td style="max-height: 25px;"><p>Dnb Field should be unlocked and allow Sales user/MDM Team to select Dnb Data on lookup form</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Dnb Field is unlocked and Sales user/MDM Team can select Dnb Data on lookup form</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">7</td>
+                        <td style="max-height: 25px;"><p>To find potential match for Dnb field Seller can click on <span class="error">&#91;Search Icon&#93;</span> present in Dnb field</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Seller is able to click on <span class="error">&#91;Search Icon&#93;</span> present in Dnb field to find potential match for Dnb data</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">8</td>
+                        <td style="max-height: 25px;"><p>To find potential match for Dnb field Seller can click on Advance find to traverse to Dnb Account Match lookup form </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Seller is able to click on Advance find to traverse to Dnb Account Match lookup form </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">9</td>
+                        <td style="max-height: 25px;"><p>The fields on the Lookup form should be in the following order :<br/>
+1. Business Name<br/>
+2. DUNS<br/>
+3. Location Type<br/>
+4. Company URL<br/>
+5. Primary Address (show the full address including city, postal code, state/province in one field)<br/>
+6. Sales USD<br/>
+7. National Identification Number</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>The fields on the Lookup form is present in the following order :<br/>
+1. Business Name<br/>
+2. DUNS<br/>
+3. Location Type<br/>
+4. Company URL<br/>
+5. Primary Address (show the full address including city, postal code, state/province in one field)<br/>
+6. Sales USD<br/>
+7. National Identification Number</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">10</td>
+                        <td style="max-height: 25px;"><p>On lookup form Only the first / top 15 matches should be displayed  with filtering criteria of Confidence Code &gt;= 6</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>On lookup form Only the first / top 15 matches is displayed  with filtering criteria of Confidence Code &gt;= 6</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">11</td>
+                        <td style="max-height: 25px;"><p>If Dnb match is found </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Seller selects potential match manually and click <span class="error">&#91;Done&#93;</span> button</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">12</td>
+                        <td style="max-height: 25px;"><p>On receipt of Dnb Match</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>The second duplicate check should run and Additional fields :-                                                                                                  <br/>
+Address Line 1,<br/>
+Address Line 2,<br/>
+City,<br/>
+Postal Code,<br/>
+State/Province,<br/>
+Phone,<br/>
+Website / URL, <br/>
+Domain                                                                                                                   <br/>
+will also be populated on the Customer Account form on selection of DUNS Number except for the Dummy DUNS Number when "Match not found"                                                                                       <br/>
+Details on <a href="https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true" class="external-link" target="_blank" rel="nofollow noopener">https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true</a> and The above Additional fields will only be populated when found blank; in case value on any of these fields is provided by Seller , it should not be overwritten</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">13</td>
+                        <td style="max-height: 25px;"><p>If Dnb match is not found </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>MDM Team can try to find the potential match or Seller can manually select "Match not found" option and click <span class="error">&#91;Done&#93;</span> button then System skips 2nd Duplicate check and seller is able to save the record</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">14</td>
+                        <td style="max-height: 25px;"><p>On save of record</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>The Customer Account Request will move to BPF Stage "MDM Review" with request status = "MDM-Pending review" and Customer Account will be created with Compliance / Finance Status = "Draft" with only the fields present on the request populated by the user and defaulted by the system                                              ((Refer Customer Account Form tab for details: <a href="https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true" class="external-link" target="_blank" rel="nofollow noopener">https://nielsenenterprise.sharepoint.com/:x:/r/sites/NIQGFKCRMIntegration/_layouts/15/Doc.aspx?sourcedoc=%7BE307A635-92A4-400E-B0EE-28B1AAA297A3%7D&amp;file=Customer%20Account%20fields%20and%20Optimizer%20details.xlsx&amp;nav=MTVfezFEOTgyNTdDLTQ0MzAtNDM4OC1CMDlFLUIxREJFNzU5QTMyRH0&amp;action=default&amp;mobileredirect=true</a>))</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+            </tr>
+                                                                    <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Admin Can work:</b></td>
+                <td id="customfield_31301-7703438-value" class="value" bgcolor="#ffffff" width="80%">    No
+</td>
+            </tr>
+                                                                                                                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Automation Type:</b></td>
+                <td id="customfield_13403-7703438-value" class="value" bgcolor="#ffffff" width="80%">    Not Applicable
+</td>
+            </tr>
+                                                                                                            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p>As part of <a href="https://adlm.nielseniq.com/jira/browse/DYNCRM-25150" title="Child 3 : On D&amp;B Match stage for Customer Account Request (similar to DYNCRM-24896)" class="issue-link" data-issue-key="DYNCRM-25150">DYNCRM-25150</a> Validate functionlity of New Field "Dnb Match" in Customer Account Creation Request form</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Comments</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="grid" style="margin: 0;">
+                <tr id="comment-header-10126770"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="sapr4004" id="word_commented_sapr4004" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sapr4004">Priyanka Salve</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">01/Aug/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-10126770"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mara5003" class="user-hover" rel="mara5003">Rahul Mangal</a>,</p>
+
+<p>TC is good to execute. Thank you!</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ghay3001" class="user-hover" rel="ghay3001">Ayan Ghosh</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pepa4001" class="user-hover" rel="pepa4001">Pavithra Peddareddy Viswanathreddy</a> </p>
+        </td></tr>
+                <tr id="comment-header-10123365"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="mara5003" id="word_commented_mara5003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mara5003">Rahul Mangal</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">31/Jul/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-10123365"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sapr4004" class="user-hover" rel="sapr4004">Priyanka Salve</a> </p>
+
+<p>Made the necessary changes, please review and provide approval.</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ghay3001" class="user-hover" rel="ghay3001">Ayan Ghosh</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pepa4001" class="user-hover" rel="pepa4001">Pavithra Peddareddy Viswanathreddy</a> </p>
+        </td></tr>
+                <tr id="comment-header-10119449"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="sapr4004" id="word_commented_sapr4004" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=sapr4004">Priyanka Salve</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">31/Jul/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-10119449"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mara5003" class="user-hover" rel="mara5003">Rahul Mangal</a>,</p>
+
+<p>Kindly make the following changes. other than TC is good.</p>
+
+<p>Step1: Please mention in test data (User Sales user/MDM Team).</p>
+
+<p>Step 6: MDM Team can also select Dnb Data on lookup form.</p>
+
+<p>Thank you!</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ghay3001" class="user-hover" rel="ghay3001">Ayan Ghosh</a> <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pepa4001" class="user-hover" rel="pepa4001">Pavithra Peddareddy Viswanathreddy</a> </p>
+        </td></tr>
+                <tr id="comment-header-10117869"><td bgcolor="#f0f0f0">
+            Comment by  
+                                                        <a class="user-hover" rel="mara5003" id="word_commented_mara5003" href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=mara5003">Rahul Mangal</a>
+                                        <font size="-2">
+            [
+                <font color="#336699">31/Jul/25</font>
+
+                            ]
+            </font>
+
+        </td></tr>
+        <tr id="comment-body-10117869"><td bgcolor="#ffffff">
+            <p>Hi <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=ghay3001" class="user-hover" rel="ghay3001">Ayan Ghosh</a> <br/>
+This is ready for review, please review and provide approval.</p>
+
+<p>CC: <a href="https://adlm.nielseniq.com/jira/secure/ViewProfile.jspa?name=pepa4001" class="user-hover" rel="pepa4001">Pavithra Peddareddy Viswanathreddy</a> </p>
+        </td></tr>
+            </table>
+Generated at Thu Aug 21 08:29:59 EDT 2025 by Chokkakula Sita Rambabu using Jira 10.3.8#10030008-sha1:cdaed80cecc964184c5b19b002388d56f96e274e.
+
+</body>
+</html>
