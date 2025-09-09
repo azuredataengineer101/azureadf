@@ -1,0 +1,226 @@
+For File share storage service. once you create the storage service 
+
+Upload the files what ever you want. 
+
+Now we can host the same File Share storage service on top of Cloud Servers windows or Unix or MacOS
+
+Create a windows virtual machine and Map the Network Drive 
+
+User Id should be your File Share Storage Account Name like 1508mystorage
+Password --> Access Keys-->Copy the Key and enter password and map the network drive..
+
+To get the connect string navigate to filesharestorage service and click on three dots select connect option there you will get script.
+
+
+$connectTestResult = Test-NetConnection -ComputerName 101adfsourcecontainer.file.core.windows.net -Port 445
+if ($connectTestResult.TcpTestSucceeded) {
+    # Save the password so the drive will persist on reboot
+    cmd.exe /C "cmdkey /add:`"101adfsourcecontainer.file.core.windows.net`" /user:`"localhost\101adfsourcecontainer`" /pass:`"zozaYeIy6JZVkuiTSGJRcvIMhwX+rfpBlwZdn4pisJCUrm1mdxWt5dcQw/mzIu0NrSU4ZQMZjdXQ+ASt4H5P+Q==`""
+    # Mount the drive
+    New-PSDrive -Name Z -PSProvider FileSystem -Root "\\101adfsourcecontainer.file.core.windows.net\fileshareservice" -Persist
+} else {
+    Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
+}
+
+
+=========================================================================================================================================================
+Microsoft Azure Explorer
+
+Like say we have two storage accounts 
+
+1.) Blob Storage Account 
+
+2.) File Share Storage Account
+
+
+As a Data Engineer I will give access to end users in order to access the content from the given storage account access.
+
+1111sourcesa ----> srccontainer--->Blob storage --->having some files 
+
+1408dldestsa -----> 1408dldestsa--->File share storage --->having some files
+
+
+Select the respective storage account and copy the Connection String (key or SAS) or Account name and Key which you want to share it with your end user
+
+DefaultEndpointsProtocol=https;AccountName=1111sourcesa;AccountKey=UE+yPt6XwPS/74WbV7rD9Tzhyh0KJIkCpPlGXGNwoxVE4K7QhAy1fe4PpLwzX9d9BcoCQCkMiHW9+AStf3ISdg==;EndpointSuffix=core.windows.net
+
+
+=========================================================================================================================================================
+
+SAS (Shared Access Signature) by using this option we can control the user access contents inside of the storage account.
+
+Add, Read, Write, Modify, Delete,Create etc.
+
+Select the respective storage account 
+
+In Storage Account Explorer select the Shared access signature URL (SAS)
+
+Provide Display Name & Service URL and click Next
+
+Copy the Blob Service SAS URL
+
+https://1111sourcesa.blob.core.windows.net/?sv=2024-11-04&ss=b&srt=sco&sp=la&se=2025-08-16T06:00:00Z&st=2025-08-16T05:33:11Z&spr=https,http&sig=%2BLXFDRbBJYlesZ%2Bw9nG5fLZ8%2BTlmf9%2BIjKYhspSUkDE%3D
+=========================================================================================================================================================
+
+.zip file copy from source to target storage accounts.
+
+Select Compression Type as ZipDeflate (.zip)
+
+Select Compression Level as Optimal
+==========================================================================================================================================================
+Implementation steps to perform Metadata activity, validation activity & If condition activity in Azure Data Factory (ADF).
+
+create both source and destination storage accounts.
+
+create Linked & Data Set for both source and target containers.
+
+Upload .csv file into the source container
+
+---Now create the pipe line and drag and drop the Get Metadata pane from Activity to the centre.
+
+---Go to settings tab and add all required fields one by one by and publish all the changes.
+
+--Run the debug and get the Output and verify the Output content.
+
+
+----Get Metadata1------
+
+INPUT
+
+{
+    "dataset": {
+        "referenceName": "DS_Input",
+        "type": "DatasetReference",
+        "parameters": {}
+    },
+    "fieldList": [
+        "columnCount",
+        "contentMD5",
+        "itemName",
+        "itemType",
+        "lastModified",
+        "size",
+        "exists",
+        "structure"
+    ],
+    "storeSettings": {
+        "type": "AzureBlobStorageReadSettings",
+        "enablePartitionDiscovery": false
+    },
+    "formatSettings": {
+        "type": "DelimitedTextReadSettings"
+    }
+}
+
+
+
+
+OUTPUT
+
+{
+	"contentMD5": "QUhr9l0h+n9Ht0zgvAfv0Q==",
+	"itemName": "Students.csv",
+	"itemType": "File",
+	"lastModified": "2025-08-20T10:27:41Z",
+	"size": 228,
+	"exists": true,
+	"structure": [
+		{
+			"name": "StudentID\tName\tAge\tGrade\tMajor\tGPA",
+			"type": "String"
+		}
+	],
+	"columnCount": 1,
+	"effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+	"executionDuration": 4,
+	"durationInQueue": {
+		"integrationRuntimeQueue": 71
+	}
+}
+
+
+Now search Validation activity from Activities pane and then drag and drop
+
+please connect both Validation control + Get Metadata1 control.
+
+
+In Validation control ---> Settings ---> kindly select the Dataset for source ---> Timeout : days:hours:min:seconds.  5.00:00:45 ---> Sleep --> 10(seconds) --> Minimum Size --> 10 (consider if size of the file more than 10 bytes else do not consider)
+
+
+---Validation if file exist----
+
+
+INPUT 
+
+{
+    "dataset": {
+        "referenceName": "DS_Input",
+        "type": "DatasetReference",
+        "parameters": {}
+    },
+    "timeout": "5.00:00:45",
+    "sleep": 10,
+    "minimumSize": 10
+}
+
+
+OUTPUT
+
+{
+	"exists": true,
+	"size": 228,
+	"effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+	"executionDuration": 1,
+	"durationInQueue": {
+		"integrationRuntimeQueue": 1
+	}
+}
+
+
+
+For validation purpose you can delete .csv file from source container and publish and run the Debug, the pipe line will get fail with Timeout error since the Pipeline does not find the file from source container.
+
+
+Now we are validating the file with another control called If condition
+
+select If condition control and drag and drop and connect this control to Get Metadata.
+
+By using this If condition control to check the file content exist or not, file content is expected or not.
+
+
+
+
+Pipeline expression builder  (if condition)
+
+@equals(activity('Get Metadata1').output.columnCount,6)
+
+
+activity('Get Metadata1')
+This refers to the Get Metadata activity in your pipeline. It’s like saying:
+“Look at the results from the step called ‘Get Metadata1’.”
+
+.output.columnCount
+This is asking for the number of columns found in the file.
+So it’s saying:
+“How many columns are in the file?”
+
+@equals(..., 6)
+This checks if the number of columns is equal to 6.
+It’s like asking:
+“Is the number of columns exactly 6?”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
